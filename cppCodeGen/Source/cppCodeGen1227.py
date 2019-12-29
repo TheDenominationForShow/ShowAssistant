@@ -43,7 +43,7 @@ def identify_func_member(line_str):
     pattern = re.compile(r".*[ \t\:](\S\S*)[ \t]*\(.*\)")
     m = pattern.match(line_str)
     if m != None:
-        func_name = m.group()
+        func_name = m.group(1)
     return True
     
 #识别数据成员
